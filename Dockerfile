@@ -1,6 +1,7 @@
 FROM registry.redhat.io/ubi9/ubi-init
 RUN dnf install openssh-server -y ; \
     systemctl enable sshd
+
 # Create the SSH user
 RUN useradd -m -s /bin/bash ssh-user
 
